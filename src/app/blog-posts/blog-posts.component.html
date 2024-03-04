@@ -1,0 +1,21 @@
+<header>
+    <h1>Blog posts</h1>
+</header>
+<div class="grid-container">
+    <div class="side-bar">
+        <p>Here come the blog posts:</p>
+        <div *ngFor="let post of [0,1,2,3,4,5]">
+            <app-blog-post [number]="post"></app-blog-post>
+        </div>
+    </div>
+    <div class="main-page">
+        <h2>Main page</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus iusto facilis eaque voluptates officiis. Deserunt temporibus inventore natus, hic corporis voluptates possimus tempora laboriosam cupiditate. Et amet delectus sequi nesciunt tenetur non sint quaerat vero possimus beatae corrupti accusamus quo asperiores tempore ipsum, aliquid quibusdam molestias officiis maxime consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus iusto facilis eaque voluptates officiis. Deserunt temporibus inventore natus, hic corporis voluptates possimus tempora laboriosam cupiditate. Et amet delectus sequi nesciunt tenetur non sint quaerat vero possimus beatae corrupti accusamus quo asperiores tempore ipsum, aliquid quibusdam molestias officiis maxime consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus iusto facilis eaque voluptates officiis. Deserunt temporibus inventore natus, hic corporis voluptates possimus tempora laboriosam cupiditate. Et amet delectus sequi nesciunt tenetur non sint quaerat vero possimus beatae corrupti accusamus quo asperiores tempore ipsum, aliquid quibusdam molestias officiis maxime consectetur.</p>
+        <h3>Subtitle</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus iusto facilis eaque voluptates officiis. Deserunt temporibus inventore natus, hic corporis voluptates possimus tempora laboriosam cupiditate. Et amet delectus sequi nesciunt tenetur non sint quaerat vero possimus beatae corrupti accusamus quo asperiores tempore ipsum, aliquid quibusdam molestias officiis maxime consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus iusto facilis eaque voluptates officiis. Deserunt temporibus inventore natus, hic corporis voluptates possimus tempora laboriosam cupiditate. Et amet delectus sequi nesciunt tenetur non sint quaerat vero possimus beatae corrupti accusamus quo asperiores tempore ipsum, aliquid quibusdam molestias officiis maxime consectetur.</p>
+    </div>
+    <div class="side-bar"></div>
+</div>
