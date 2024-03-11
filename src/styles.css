@@ -1,12 +1,11 @@
-@font-face {
-    font-family: myFont;
-    src: url(assets/fonts/ttf/JetBrainsMono-ExtraLight.ttf);
-}
-
 body {
     padding: 0; 
     margin: 0;
-    font-family: myFont;
+    min-height: 1vh;
+    background-color: rgb(155, 176, 193);
+}
+footer {
+    height: 200px;
 }
 
 .grid-container {

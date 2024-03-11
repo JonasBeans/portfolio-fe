@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { BlogPost } from 'src/DTO/BlogPost';
 
 @Component({
   selector: 'app-blog-post',
-  templateUrl: './blog-post.component.html',
+  template: '<div><button><p>{{post.title}}</p></button></div>',
   styleUrls: ['./blog-post.component.css']
 })
 export class BlogPostComponent {
-    @Input() public number?: number = 0;
+    @Input() public post: BlogPost = {title: ''};
 
 }
