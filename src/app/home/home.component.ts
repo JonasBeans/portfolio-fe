@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BlogPost } from 'src/DTO/BlogPost';
-import { BlogService } from '../blog.service';
+import { BlogService } from '../service/blog.service';
 
 @Component({
   selector: 'app-home',

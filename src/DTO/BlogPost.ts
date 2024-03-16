@@ -1,3 +1,4 @@
 export interface BlogPost{
-    title: String;
+    title: string;
+    path: string
 }

@@ -9,9 +9,10 @@ import { BlogPost } from 'src/DTO/BlogPost';
 })
 export class ProjectsComponent {
     public currentMarkdown: string = "../../assets/posts/LinodePortfolioWebsite.md";
+
     public possiblePosts: BlogPost[] = [
-        {title:"Linode Portfolio Website"}, 
-        {title:"Markdown insert color VS Code plugin"}
+        {title:"Linode Portfolio Website", path: "../../assets/post"}, 
+        {title:"Markdown insert color VS Code plugin", ""}
     ];
 
 }

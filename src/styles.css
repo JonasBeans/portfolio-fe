@@ -20,7 +20,7 @@ header {
 
 header h1{
     margin: 0;
-    padding: 10px;
+    padding: 10px 0;
     background-color: rgb(81, 130, 155);
 }
 
@@ -34,9 +34,8 @@ header h1{
     background-color: rgb(155, 176, 193);
 }
 
-h1 {
-    margin: 0;
-    padding: 0.25em;
+#page-title{
+    padding: 10px 0 10px 25%;
 }
 
 nav {
