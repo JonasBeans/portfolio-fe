@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MarkdownComponent } from 'ngx-markdown';
 import { BlogPost } from 'src/DTO/BlogPost';
+import { BlogService } from '../service/blog.service';
 
 @Component({
   selector: 'app-projects',
@@ -9,10 +10,12 @@ import { BlogPost } from 'src/DTO/BlogPost';
 })
 export class ProjectsComponent {
     public currentMarkdown: string = "../../assets/posts/LinodePortfolioWebsite.md";
+    public posts?: String[];
 
-    public possiblePosts: BlogPost[] = [
-        {title:"Linode Portfolio Website", path: "../../assets/post"}, 
-        {title:"Markdown insert color VS Code plugin", ""}
-    ];
+    public constructor(private blogService: BlogService) { };
+
+    ngOnInit(){
+        this.blogService.getPostTitles().subscribe((result) => this.posts = result);
+    }
 
 }

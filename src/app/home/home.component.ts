@@ -8,11 +8,11 @@ import { BlogService } from '../service/blog.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-    public posts?: BlogPost[];
+    public posts?: String[];
 
     public constructor(private blogService: BlogService) { };
 
-    $onInit(){
+    onInit(){
         this.blogService.getPostTitles().subscribe((result) => this.posts = result);
     }
 }

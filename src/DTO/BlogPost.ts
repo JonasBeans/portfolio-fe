@@ -1,4 +1,6 @@
 export interface BlogPost{
     title: string;
-    path: string
+    timeOfWriting: Date;
+    page: String;
+    content: string
 }
