@@ -1,12 +1,12 @@
-<header>
-    <h1>Blog posts</h1>
-</header>
 <div class="grid-container">
     <div class="side-bar">
+        <input type="text" placeholder="placeholder">
         <p>Here come the blog posts:</p>
-        <div *ngFor="let post of posts">
+        <div *ngFor="let post of getPosts()">
             <app-blog-post  [post]="post" (pageContent)="receivePageContent($event)"></app-blog-post>
         </div>
+        <button (click)="getPrevious()">previous 5</button>
+        <button (click)="getNext()">next 5</button>
     </div>
     <div class="main-page">
         <markdown mermaid data={{currentMarkdown}} ></markdown>

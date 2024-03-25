@@ -11,8 +11,12 @@ import { MarkdownService } from 'ngx-markdown';
 })
 export class BlogPostsComponent {
     
+    
+    
     public posts?: String[];
     public currentMarkdown: string = "";
+    public startIndex = 0;
+    public endIndex = 5;
 
     public constructor(
         private blogService: BlogService
@@ -26,6 +30,22 @@ export class BlogPostsComponent {
         const decoder = new TextDecoder('utf-8');
         this.currentMarkdown = decoder
             .decode(Uint8Array.from(atob(pageContent.content), c => c.charCodeAt(0)).buffer);
+    }
+
+    getPosts(): String[]{
+        return this.posts == undefined ?  
+            [] : 
+            this.posts.slice(this.startIndex, this.endIndex);
+    }
+
+    getNext() {
+        this.startIndex+= 5;
+        this.endIndex+= 5;
+    }
+
+    getPrevious() {
+        this.startIndex - 5 < 0 ? this.startIndex -= 5 : this.startIndex = 0;
+        this.endIndex-= 10 < 0 ? this.endIndex -= 5 : this.endIndex = 5;
     }
 
 }
